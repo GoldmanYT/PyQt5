@@ -23,8 +23,9 @@ class Example(QMainWindow):
             qp.end()
 
     def draw(self, qp):
-        qp.setPen(QColor(255, 255, 0))
-        qp.setBrush(QColor(255, 255, 0))
+        color = QColor(rand(0, 255), rand(0, 255), rand(0, 255))
+        qp.setPen(color)
+        qp.setBrush(color)
         x, y, r = rand(0, 300), rand(15, 300), rand(10, 100)
         qp.drawEllipse(x, y, r, r)
 
